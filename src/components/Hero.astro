@@ -1,5 +1,6 @@
 ---
-
+import { AboutMeData } from "../data/AboutMe.js";
+import profileImage from "../assets/fdp.jpg";
 ---
 
 <section id="hero" class="flex min-h-screen items-center backdrop-blur-sm">
@@ -15,20 +16,22 @@
   >
     <!-- Texto Principal -->
     <div class="text-center md:text-left mb-8 md:mb-0 flex flex-col md:flex">
-      <h1
+      <span class="text-5xl font-semibold text-neutral-800 dark:text-white transition-colors duration-300">
+        Hola, soy 
+        <h1
         class="transition-colors duration-500 text-4xl md:text-9xl font-bold bg-gradient-to-r from-purple-500 via-red-500 to-blue-500 text-transparent bg-clip-text dark:text-white py-6"
       >
-        Hola, soy Axel
+        {AboutMeData.name}
       </h1>
+      </span>
       <p class="text-xl md:text-2xl  mt-4 text-neutral-600 dark:text-white">
-        Soy un desarrollador frontend apasionado por crear experiencias
-        digitales intuitivas, funcionales y visualmente impactantes.
+        {AboutMeData.shortDescription}
       </p>
       <div class="flex-col gap-4 md:flex-row">
         <a
           href="https://www.linkedin.com/in/axel-del-solar-aa97881a3/"
           target="_blank"
-          class="inline-flex items-center mt-8 px-6 py-3 bg-white hover:bg-neutral-400 border-2 hover:text-white dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:border-0 transition-colors rounded-lg font-semibold"
+          class="inline-flex items-center mt-8 px-6 py-3 bg-white hover:bg-neutral-400  hover:text-white dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:border-0 transition-colors rounded-lg font-semibold"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +56,7 @@
         <a
           href="https://github.com/Giands96"
           target="_blank"
-          class="inline-flex items-center mt-8 px-6 py-3 bg-white hover:bg-neutral-400 border-2 hover:text-white dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:border-0 transition-colors rounded-lg font-semibold"
+          class="inline-flex items-center mt-8 px-6 py-3 bg-white hover:bg-neutral-400  hover:text-white dark:bg-neutral-800 dark:hover:bg-neutral-900 dark:border-0 transition-colors rounded-lg font-semibold"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -80,9 +83,9 @@
     <div class="flex justify-center md:w-1/2 py-10">
       <img
         id="photo"
-        src="https://unavatar.io/deviantart/spyed"
+        src={ profileImage.src }
         alt="That's me!"
-        class="w-48 h-48 rounded-full border-4 border-neutral-800 shadow-lg"
+        class="w-96 rounded-full border-neutral-800 shadow-lg"
       />
     </div>
   </div>
