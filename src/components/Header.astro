@@ -2,7 +2,7 @@
 const email = "dsg4857@gmail.com";
 ---
 
-<header class="bg-white/40 dark:bg-neutral-900/40 sticky py-4 top-0 backdrop-blur-md z-10">
+<header class="bg-white/40 dark:bg-neutral-900/40 fixed w-full py-4 top-0 backdrop-blur-md z-10">
   <nav class="container mx-auto px-4 md:px-6 flex justify-between items-center">
     <div class="email flex gap-2 items-center">
       <svg
@@ -59,7 +59,7 @@ const email = "dsg4857@gmail.com";
 
     <ul
       id="menu"
-      class="hidden md:flex md:gap-6 absolute md:static left-0 right-0 top-16 bg-neutral-900/90 md:bg-transparent p-4 md:p-0 flex-col md:flex-row items-center"
+      class="hidden md:flex md:gap-6 absolute md:static left-0 right-0 top-16 bg-white/80 dark:bg-neutral-900/50 md:bg-transparent p-4 md:p-0 flex-col md:flex-row items-center"
     >
       <li class="py-2 md:py-0">
         <a
@@ -93,24 +93,24 @@ const email = "dsg4857@gmail.com";
         <button
           id="darkmodeButton"
           type="button"
-          class="border-2 px-4 rounded-full transition-all"
+          class="group border-2 px-4 rounded-full transition-all hover:bg-gray-600 hover:text-white"
         >
           <div class="flex">
             <svg
-              id="moon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="gray"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-moon"
-            >
-              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
-            </svg>
+      id="moon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="lucide lucide-moon group-hover:text-white"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
             <svg
               id="sun"
               xmlns="http://www.w3.org/2000/svg"
