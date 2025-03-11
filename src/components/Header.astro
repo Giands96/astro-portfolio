@@ -1,0 +1,190 @@
+---
+const email = "dsg4857@gmail.com";
+---
+
+<header class="bg-white/40 dark:bg-neutral-900/40 sticky py-4 top-0 backdrop-blur-md z-10">
+  <nav class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+    <div class="email flex gap-2 items-center">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="lucide lucide-mail"
+      >
+        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+      </svg>
+      <span class="hidden sm:inline">{email}</span>
+    </div>
+
+    <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="hamburger-icon"
+      >
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="close-icon hidden"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <ul
+      id="menu"
+      class="hidden md:flex md:gap-6 absolute md:static left-0 right-0 top-16 bg-neutral-900/90 md:bg-transparent p-4 md:p-0 flex-col md:flex-row items-center"
+    >
+      <li class="py-2 md:py-0">
+        <a
+          href="index.html"
+          class="font-semibold relative after:block after:content-[''] after:w-full after:border-b-2 after:border-black after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-250 after:ease-in-out dark:after:border-white"
+          >Inicio</a
+        >
+      </li>
+      <li class="py-2 md:py-0">
+        <a
+          href="about.html"
+          class="font-semibold relative after:block after:content-[''] after:w-full after:border-b-2 after:border-black after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-250 after:ease-in-out dark:after:border-white"
+          >Sobre mi</a
+        >
+      </li>
+      <li class="py-2 md:py-0">
+        <a
+          href="projects.html"
+          class="font-semibold relative after:block after:content-[''] after:w-full after:border-b-2 after:border-black after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-250 after:ease-in-out dark:after:border-white"
+          >Proyectos</a
+        >
+      </li>
+      <li class="py-2 md:py-0">
+        <a
+          href="contact.html"
+          class="font-semibold relative after:block after:content-[''] after:w-full after:border-b-2 after:border-black after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-250 after:ease-in-out dark:after:border-white"
+          >Contacto</a
+        >
+      </li>
+      <li>
+        <button
+          id="darkmodeButton"
+          type="button"
+          class="border-2 px-4 rounded-full transition-all"
+        >
+          <div class="flex">
+            <svg
+              id="moon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="gray"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-moon"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+            <svg
+              id="sun"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-sun-moon hidden"
+            >
+              <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4"></path>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.9 4.9 1.4 1.4"></path>
+              <path d="m17.7 17.7 1.4 1.4"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.3 17.7-1.4 1.4"></path>
+              <path d="m19.1 4.9-1.4 1.4"></path>
+            </svg>
+          </div>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    const hamburgerIcon = document.querySelector(".hamburger-icon");
+    const closeIcon = document.querySelector(".close-icon");
+
+    if (menuToggle && menu && hamburgerIcon && closeIcon) {
+      menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("hidden");
+        hamburgerIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+      });
+
+      const menuLinks = menu.querySelectorAll("a");
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          if (window.innerWidth < 768) {
+            menu.classList.add("hidden");
+            hamburgerIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+          }
+        });
+      });
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 768) {
+          menu.classList.remove("hidden");
+        } else if (!hamburgerIcon.classList.contains("hidden")) {
+          menu.classList.add("hidden");
+        }
+      });
+    }
+
+    const toggleDark = document.querySelector("#darkmodeButton");
+    const moon = document.getElementById("moon");
+    const sun = document.getElementById('sun');
+
+    toggleDark?.addEventListener('click',()=>{
+      document.documentElement.classList.toggle('dark');
+      moon?.classList.toggle('hidden');
+      sun?.classList.toggle('hidden');
+    })
+
+
+  });
+</script>
