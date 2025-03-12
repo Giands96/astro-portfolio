@@ -1,0 +1,49 @@
+---
+import { SkillsData } from "../data/Skills";
+
+import html5 from "../assets/html5.svg"
+---
+
+<section id="skills" class="py-16 bg-white dark:bg-zinc-800">
+  <div class="container mx-auto px-4 md:px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-zinc-900 dark:text-white relative inline-block">
+        {SkillsData.title}
+        <span class="absolute -bottom-2 left-1/4 right-1/4 h-1 bg-indigo-500"></span>
+      </h2>
+      <p class="text-lg text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
+        {SkillsData.description}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {SkillsData.categories.map((category) => (
+        <div class="bg-zinc-50 dark:bg-zinc-700 rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
+          <h3 class="text-xl font-bold mb-6 text-zinc-800 dark:text-white border-b border-zinc-200 dark:border-zinc-600 pb-2">
+            {category.name}
+          </h3>
+          <div class="grid grid-cols-2 gap-4">
+            {category.skills.map((skill) => (
+              <div class="flex flex-col items-center">
+                <img src={skill.iconSrc.src} alt={`${skill.name} icon`} class="w-16 h-16 mb-2" />
+                <span class="font-medium text-zinc-700 dark:text-zinc-200 text-center">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Sección adicional para soft skills -->
+    <div class="mt-16 bg-zinc-50 dark:bg-zinc-700 rounded-xl p-8 shadow-md">
+      <h3 class="text-2xl font-bold mb-6 text-zinc-800 dark:text-white text-center">
+        Otras Habilidades
+      </h3>
+      <div class="flex flex-wrap justify-center gap-3">
+        {SkillsData.softSkills.map((skill) => (
+          <span class="px-4 py-2 bg-white dark:bg-zinc-600 text-zinc-800 dark:text-zinc-200 rounded-full shadow-sm text-sm font-medium">{skill}</span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
