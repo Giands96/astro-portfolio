@@ -1,6 +1,4 @@
 // Archivo: src/data/Projects.js
-import portfolioImg from "../components/images/portfolio.webp";
-import mernchatImg from "../components/images/mernchat.webp";
 
 export const ProjectsData = {
     description: "Estos son algunos de mis proyectos más recientes donde he aplicado mis conocimientos y habilidades.",
@@ -8,7 +6,7 @@ export const ProjectsData = {
       {
         title: "Portfolio Personal",
         description: "Portfolio personal desarrollado con Astro y Tailwind CSS, mostrando mis proyectos y habilidades.",
-        image: portfolioImg,
+        image: "/images/portfolio.webp",
         technologies: ["Astro", "Tailwind CSS", "JavaScript"],
         liveUrl: "https://axel-astro-portfolio.netlify.app/",
         repoUrl: "https://github.com/Giands96/astro-portfolio",
@@ -16,8 +14,8 @@ export const ProjectsData = {
       },
       {
         title: "Aplicación de Mensajería",
-        description: "Una App de Mensajeria desarrollado con MERN Stack (MongoDB, Express, React y NodeJS)",
-        image: mernchatImg,
+        description: "Tienda online con carrito de compras, gestión de usuarios y pasarela de pago.",
+        image: "/images/mernchat.webp",
         technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
         liveUrl: "https://mern-chat-2p49.onrender.com",
         repoUrl: "https://github.com/Giands96/mern-chat",
