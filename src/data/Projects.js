@@ -6,28 +6,22 @@ export const ProjectsData = {
       {
         title: "Portfolio Personal",
         description: "Portfolio personal desarrollado con Astro y Tailwind CSS, mostrando mis proyectos y habilidades.",
-        image: "/images/projects/portfolio.webp",
+        image: "./src/components/images/portfolio.webp",
         technologies: ["Astro", "Tailwind CSS", "JavaScript"],
-        liveUrl: "https://mi-portfolio.com",
-        repoUrl: "https://github.com/username/portfolio",
-        featured: true
+        liveUrl: "https://axel-astro-portfolio.netlify.app/",
+        repoUrl: "https://github.com/Giands96/astro-portfolio",
+        
       },
       {
-        title: "E-commerce App",
+        title: "Aplicación de Mensajería",
         description: "Tienda online con carrito de compras, gestión de usuarios y pasarela de pago.",
-        image: "/images/projects/ecommerce.webp",
-        technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-        liveUrl: "https://mi-tienda.com",
-        repoUrl: "https://github.com/username/ecommerce-app"
+        image: "./src/components/images/mernchat.webp",
+        technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
+        liveUrl: "https://mern-chat-2p49.onrender.com",
+        repoUrl: "https://github.com/Giands96/mern-chat",
+        featured: true,
       },
-      {
-        title: "Task Manager",
-        description: "Aplicación para gestionar tareas diarias con notificaciones y calendario.",
-        image: "/images/projects/task-manager.webp",
-        technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
-        liveUrl: "https://mi-task-manager.com",
-        repoUrl: "https://github.com/username/task-manager"
-      }
+
     ],
     showMoreButton: true,
     moreProjectsUrl: "/all-projects"
