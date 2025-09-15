@@ -14,7 +14,7 @@ export const ProjectsData = {
       },
       {
         title: "Aplicación de Mensajería",
-        description: "Tienda online con carrito de compras, gestión de usuarios y pasarela de pago.",
+        description: "Chat App desarrollado con el stack MERN, permitiendo a los usuarios registrarse, iniciar sesión y enviar mensajes en tiempo real.",
         image: "/images/mernchat.webp",
         technologies: ["React", "Node.js", "MongoDB", "Tailwind CSS", "Express"],
         liveUrl: "https://mern-chat-2p49.onrender.com",
