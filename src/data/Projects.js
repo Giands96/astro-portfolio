@@ -21,6 +21,15 @@ export const ProjectsData = {
         repoUrl: "https://github.com/Giands96/mern-chat",
         featured: true,
       },
+      {
+        title: "AD Studio Landing Page",
+        description: "Landing page para una agencia de marketing digital, creada con WordPress y Elementor.",
+        image: "/images/adstudio.webp",
+        technologies: ["WordPress", "Elementor", "PHP", "CSS"],
+        liveUrl: "https://adstudiope.site/",
+        repoUrl: "Hostgator",
+        featured: true,
+      }
 
     ],
     showMoreButton: true,
