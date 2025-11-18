@@ -1,5 +1,5 @@
 // src/data/AboutMeData.js
-import fdp from '../assets/fdp.jpg';
+import fdp from '../assets/fdp.png';
 
 export const AboutMeData = {
   name: 'Axel Del Solar',
